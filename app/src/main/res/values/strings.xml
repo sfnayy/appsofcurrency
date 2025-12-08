@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SOF Currency</string>
+
+    <string name="header_title">Currency\nConverter</string>
+    <string name="header_subtitle">Real-time exchange rates</string>
+
+    <string name="label_amount">Amount</string>
+    <string name="label_converted">Converted Amount</string>
+    <string name="label_quick">Quick Conversions</string>
+
+    <string name="btn_graph">View Market Trend</string>
+
+    <string name="info_loading">Loading data...</string>
+    <string name="info_failed">Failed to connect</string>
+    <string name="info_market">Real-time Market</string>
+
+    <string name="dialog_language_title">Choose Language</string>
+    <string name="graph_header">Market Trend</string>
+    <string name="graph_sub">30 Days History</string>
+    <string name="btn_back">Back to Home</string>
+    <string name="status_loading">Loading Data...</string>
+    <string name="status_empty">No Data Available</string>
+    <string name="status_failed">Connection Failed</string>
+    <string name="status_check_internet">Check your internet</string>
+</resources>

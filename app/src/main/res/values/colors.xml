@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#1F2937</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="primary_blue">#3D5AFE</color>
+    <color name="primary_blue_dark">#304FFE</color>
+
+    <color name="app_background">#F3F4F6</color>
+    <color name="input_bg">#FFFFFF</color>
+    <color name="input_border">#E5E7EB</color>
+    <color name="text_hint">#9CA3AF</color>
+
+    <color name="btn_soft_bg">#C5CAE9</color>
+    <color name="btn_soft_text">#1A237E</color>
+
+    <color name="splash_bg_default">#3D5AFE</color> <color name="splash_bg_us">#1A237E</color>      <color name="box_info">#D9D9D9</color>
+</resources>

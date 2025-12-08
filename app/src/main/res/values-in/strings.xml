@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SOF Currency</string>
+
+    <string name="header_title">Konversi\nMata Uang</string>
+    <string name="header_subtitle">Nilai tukar waktu nyata</string>
+
+    <string name="label_amount">Jumlah Uang</string>
+    <string name="label_converted">Hasil Konversi</string>
+    <string name="label_quick">Konversi Cepat</string>
+
+    <string name="btn_graph">Lihat Grafik Tren</string>
+
+    <string name="info_loading">Memuat data...</string>
+    <string name="info_failed">Gagal terhubung</string>
+    <string name="info_market">Pasar Real-time</string>
+
+    <string name="dialog_language_title">Pilih Bahasa</string>
+    <string name="graph_header">Tren Pasar</string>
+    <string name="graph_sub">Riwayat 30 Hari</string>
+    <string name="btn_back">Kembali ke Beranda</string>
+    <string name="status_loading">Memuat Data...</string>
+    <string name="status_empty">Data Tidak Tersedia</string>
+    <string name="status_failed">Gagal Koneksi</string>
+    <string name="status_check_internet">Cek internet anda</string>
+</resources>

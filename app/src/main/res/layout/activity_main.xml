@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_title"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/primary_blue"
+        android:lineSpacingExtra="-4dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_subtitle"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"/>
+
+    <ImageButton
+        android:id="@+id/btnLanguage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_language"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="@id/tvHeader"
+        app:layout_constraintBottom_toBottomOf="@id/tvHeader"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_shadow"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:elevation="4dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_amount"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/imgFlagSource"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/flag_id"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spSourceCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:layout_marginEnd="5dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input_modern"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSymbolSource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp"
+                    android:textSize="18sp"
+                    android:textColor="@color/primary_blue"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="5dp"/>
+
+                <EditText
+                    android:id="@+id/etAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/input_border"
+                android:layout_gravity="center"/>
+            <ImageButton
+                android:id="@+id/btnSwitch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_popup_sync"
+                android:background="@drawable/btn_primary_modern"
+                android:layout_gravity="center"
+                android:elevation="2dp"
+                app:tint="@color/white"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_converted"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/imgFlagTarget"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/flag_us"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spTargetCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:layout_marginEnd="5dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input_modern"
+                android:backgroundTint="#F9FAFB"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSymbolTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    android:textSize="18sp"
+                    android:textColor="@color/primary_blue"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/primary_blue"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRateInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_market"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblQuick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_quick"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardContainer"/>
+
+    <LinearLayout
+        android:id="@+id/quickContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/lblQuick">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnQuick1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="1"
+            android:background="@drawable/btn_soft_modern"
+            android:textColor="@color/btn_soft_text"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:stateListAnimator="@null"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnQuick2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="10"
+            android:background="@drawable/btn_soft_modern"
+            android:textColor="@color/btn_soft_text"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:stateListAnimator="@null"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnQuick3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="100"
+            android:background="@drawable/btn_soft_modern"
+            android:textColor="@color/btn_soft_text"
+            android:textStyle="bold"
+            android:stateListAnimator="@null"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnViewGraph"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/btn_graph"
+        android:background="@drawable/btn_primary_modern"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@+id/quickContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
